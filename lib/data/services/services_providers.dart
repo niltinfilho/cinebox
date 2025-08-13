@@ -8,7 +8,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'services_providers.g.dart';
 
 @riverpod
-GoogleSigninService googleSigninService(Ref ref) {
+GoogleSigninService googleSignInService(Ref ref) {
   return GoogleSigninServiceImpl();
 }
 

@@ -6,6 +6,54 @@ part of 'services_providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+@ProviderFor(googleSignInService)
+const googleSignInServiceProvider = GoogleSignInServiceProvider._();
+
+final class GoogleSignInServiceProvider
+    extends
+        $FunctionalProvider<
+          GoogleSigninService,
+          GoogleSigninService,
+          GoogleSigninService
+        >
+    with $Provider<GoogleSigninService> {
+  const GoogleSignInServiceProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'googleSignInServiceProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$googleSignInServiceHash();
+
+  @$internal
+  @override
+  $ProviderElement<GoogleSigninService> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  GoogleSigninService create(Ref ref) {
+    return googleSignInService(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(GoogleSigninService value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<GoogleSigninService>(value),
+    );
+  }
+}
+
+String _$googleSignInServiceHash() =>
+    r'96017f94fc014e44fb8cbb7f28d7f78ed7bb5abf';
+
 @ProviderFor(localStorageService)
 const localStorageServiceProvider = LocalStorageServiceProvider._();
 
@@ -23,7 +71,7 @@ final class LocalStorageServiceProvider
         argument: null,
         retry: null,
         name: r'localStorageServiceProvider',
-        isAutoDispose: true,
+        isAutoDispose: false,
         dependencies: null,
         $allTransitiveDependencies: null,
       );
@@ -52,7 +100,7 @@ final class LocalStorageServiceProvider
 }
 
 String _$localStorageServiceHash() =>
-    r'8a0e08cc94178323e31734d2baf6104a12ff3a38';
+    r'6393dfa3b7044bce3761873180d69dc9438297b5';
 
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
