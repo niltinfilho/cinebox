@@ -1,5 +1,6 @@
 import 'package:cinebox/data/repositories/auth/auth_repository.dart';
 import 'package:cinebox/data/repositories/auth/auth_repository_impl.dart';
+import 'package:cinebox/data/services/auth/auth_service.dart';
 import 'package:cinebox/data/services/services_providers.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -10,5 +11,6 @@ AuthRepository authRepository(Ref ref) {
   return AuthRepositoryImpl(
     localStorageService: ref.read(localStorageServiceProvider),
     googleSigninService: ref.read(googleSignInServiceProvider),
+    authService: ref.read(authServiceProvider),
   );
 }
