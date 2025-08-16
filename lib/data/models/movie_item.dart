@@ -10,8 +10,8 @@ class MovieItem {
   final List<int>? genreIds;
   final String? posterPath;
   final String? backdropPath;
-  final double voteAvarage;
-  final String? releaseData;
+  final double voteAverage;
+  final String? releaseDate;
 
   MovieItem({
     required this.id,
@@ -20,8 +20,8 @@ class MovieItem {
     this.genreIds,
     this.posterPath,
     this.backdropPath,
-    required this.voteAvarage,
-    this.releaseData,
+    required this.voteAverage,
+    this.releaseDate,
   });
 
   factory MovieItem.fromJson(Map<String, dynamic> json) =>
