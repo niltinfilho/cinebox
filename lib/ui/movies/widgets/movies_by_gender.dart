@@ -15,7 +15,7 @@ class _MoviesByGenderState extends ConsumerState<MoviesByGender> {
     return Container(
       margin: EdgeInsets.only(bottom: 140),
       child: MoviesBox(
-        title: 'Filmes encontrados',
+        title: 'Filmes Encontrados',
         vertical: true,
       ),
     );
