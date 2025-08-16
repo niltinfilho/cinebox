@@ -16,7 +16,7 @@ MovieItem _$MovieItemFromJson(Map<String, dynamic> json) => MovieItem(
   posterPath: json['poster_path'] as String?,
   backdropPath: json['backdrop_path'] as String?,
   voteAverage: (json['vote_average'] as num).toDouble(),
-  releaseData: json['release_data'] as String?,
+  releaseDate: json['release_date'] as String?,
 );
 
 Map<String, dynamic> _$MovieItemToJson(MovieItem instance) => <String, dynamic>{
@@ -27,5 +27,5 @@ Map<String, dynamic> _$MovieItemToJson(MovieItem instance) => <String, dynamic>{
   'poster_path': instance.posterPath,
   'backdrop_path': instance.backdropPath,
   'vote_average': instance.voteAverage,
-  'release_data': instance.releaseData,
+  'release_date': instance.releaseDate,
 };
